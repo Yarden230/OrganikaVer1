@@ -35,6 +35,8 @@ namespace OrganikaVer1
                 StartActivity(new Intent(this, typeof(UserDashboardActivity)));
             //לכתוב את השורה למעלה בצורה יותר טובה, להריץ ולבדוק זה עובד
 
+            FindViewById<Button>(Resource.Id.btnToMainPage).Click += (s, e) =>
+                StartActivity(new Intent(this, typeof(MainPage)));
 
             TvMonth = FindViewById<TextView>(Resource.Id.tvMonth);
             TvNum = FindViewById<TextView>(Resource.Id.tvNum);

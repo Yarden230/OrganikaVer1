@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
+using Android.Gms.Common.Apis;
 using Android.Gms.Extensions;
 using Android.OS;
 using Android.Runtime;
@@ -45,6 +46,9 @@ namespace OrganikaVer1.Service
                 // Reauthenticate the ACTIVE user session to Current User CredentiaLS
                 credential = EmailAuthProvider.GetCredential(ProManager.CurrentUser.UserEmail, ProManager.CurrentUser.UserPass);
                 await FirebaseAuth.Instance.SignInWithCredential(credential);
+
+                //delete all user related events
+                DeleteAllUserEvents((userToDelete as Model.User).Id);
             }
             catch (Exception ex)
             {
@@ -52,6 +56,26 @@ namespace OrganikaVer1.Service
                 throw new Exception("Delete user failed!");
             }
         }
+
+        private static async void DeleteAllUserEvents(string userId)
+        {
+            try
+            {
+                var userEvents = await FirebaseFirestore.Instance.Collection("events").WhereEqualTo("UserId", userId).Get();
+
+                foreach (var userEvent in ((QuerySnapshot)userEvents).Documents)
+                {
+                    await FirebaseFirestore.Instance.Collection("events").Document(userEvent.Id).Delete();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Debug(ProManager.TAG, $"Delete all user events failed! " + ex.Message);
+                throw new Exception("Delete all user events failed!");
+            }
+
+        }
+
         public static async Task<object> GetByIdAsync(string userId)
         {
             Model.User newuser = null;

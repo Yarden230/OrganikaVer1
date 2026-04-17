@@ -19,9 +19,18 @@
             android:layout_margin="10dp"
             android:backgroundTint="#de4ecf"
             android:textColor="#FFFFFF" />
-		
 
-        <!-- Month Row -->
+		<Button
+            android:id="@+id/btnToMainPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← to main"
+            android:layout_margin="10dp"
+            android:backgroundTint="#de4ecf"
+            android:textColor="#FFFFFF" />
+
+
+		<!-- Month Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"

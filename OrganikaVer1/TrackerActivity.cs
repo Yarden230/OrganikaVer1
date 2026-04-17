@@ -23,7 +23,7 @@ namespace OrganikaVer1
         TextView tvTestTextView;
         //private List<Task> _myTasks;
         //EventListAdapter TLAdapter;
-        Button btnAddEvent;
+        Button btnAddEvent, btnToMainPage;
         Dialog mProgressDialog;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -33,6 +33,7 @@ namespace OrganikaVer1
 
             InitilizeViews();
             GetEventsListfromDB();
+
 
             // 1. Find the ListView on the screen
             //lvTasks = FindViewById<ListView>(Resource.Id.listViewTasks);

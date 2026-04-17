@@ -50,6 +50,8 @@
         android:text="+ Add Event"
         android:textColor="#FFFFFF" />
 	
+
+	
     <ListView
         android:id="@+id/lvTasks"
         android:layout_width="match_parent"
