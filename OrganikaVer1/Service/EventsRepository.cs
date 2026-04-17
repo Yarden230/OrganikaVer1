@@ -171,19 +171,34 @@ namespace OrganikaVer1.Service
         }
 
         // LISTENER: listens to real-time changes on the "events" collection
-        public static void FetchEventsListener()
-        {
-            FirestoreEventListener = new FirestoreEventListener();
-            Registration = FirebaseFirestore.Instance
-                .Collection("events")
-                .AddSnapshotListener(FirestoreEventListener);
-        }
 
-        public static void StopEventsListener()
-        {
-            Registration?.Remove();
-            Registration = null;
-            FirestoreEventListener = null;
-        }
+
+
+
+
+
+
+
+
+        //ליסטנר זה פקודה וקנספט כזה שמאפשר עדכון בזמן אמת במקרה שמישהו מוסיף איוונט. באיוונטים זה לא קריטיי כי כל משתמש אכפת לו רק מעצמו, ולכן ל אצריך אותם כאן.
+        //צריך ליסטנר רק ביוזרים כדי שהאדמין יראה בזמן אמת מתי נוספים עוד משתמשים!
+
+
+
+
+        //public static void FetchEventsListener()
+        //{
+        //    FirestoreEventListener = new FirestoreEventListener();
+        //    Registration = FirebaseFirestore.Instance
+        //        .Collection("events")
+        //        .AddSnapshotListener(FirestoreEventListener);
+        //}
+
+        //public static void StopEventsListener()
+        //{
+        //    Registration?.Remove();
+        //    Registration = null;
+        //    FirestoreEventListener = null;
+        //}
     }
 }

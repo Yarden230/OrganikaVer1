@@ -102,11 +102,13 @@ namespace OrganikaVer1
                 return;
             }
         }
-
+        //לפני מתכונת צריך להבין את כל האון ריזיום און פאוז אלו
         protected override void OnResume()
         {
             base.OnResume();
-            //ShowTrackerList();
+            
+
+            //update adapter with latest data from DB
         }
 
         private void InitilizeViews()
