@@ -18,6 +18,9 @@ namespace OrganikaVer1
         TextView tvSignIn, tvSignUp;
         private readonly string TAG = "YARDENAPP";
 
+
+        //Yarden changee
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
