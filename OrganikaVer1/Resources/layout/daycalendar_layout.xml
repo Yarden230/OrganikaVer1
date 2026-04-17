@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+		<Button
+            android:id="@+id/btnDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Dashboard"
+            android:layout_margin="10dp"
+            android:backgroundTint="#de4ecf"
+            android:textColor="#FFFFFF" />
+		
+
+        <!-- Month Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="@null"
+                />
+
+            <TextView
+                android:id="@+id/tvMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONTH"
+                android:textSize="25sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_media_next"
+                android:background="@null"/>
+
+        </LinearLayout>
+
+        <!-- Day + Date Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" NUM "
+                android:textSize="20sp"
+                android:background="#d199ff"
+                android:gravity="left"/>
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAY"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+            
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="49">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 00:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum00"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 00"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour00"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 01:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum01"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 01"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour01"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 02:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum02"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 02"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour02"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 03:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum03"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 03"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour03"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 04:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum04"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 04"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour04"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 05:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum05"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 05"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour05"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 06:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum06"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 06"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour06"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 07:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum07"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 07"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour07"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 08:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum08"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 08"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour08"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 09:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum09"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 09"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour09"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 10:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum10"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 10"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour10"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 11:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum11"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 11"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour11"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 12:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum12"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 12"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour12"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 13:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum13"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 13"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour13"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 14:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum14"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 14"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour14"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 15:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum15"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 15"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour15"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 16:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum16"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 16"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour16"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 17:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum17"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 17"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour17"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 18:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum18"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 18"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour18"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 19:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum19"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 19"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour19"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 20:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum20"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 20"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour20"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 21:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum21"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 21"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour21"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 22:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum22"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 22"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour22"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=" 23:00 "
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#ccdfe6"
+                android:id="@+id/tvNum23"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" EVENT FOR HOUR 23"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:background="#f5f7ff"
+                android:id="@+id/tvHour23"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_columnSpan="2"
+                android:layout_margin="7dp"
+                />
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,137 @@
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Util;
+using Android.Views;
+using Android.Widget;
+using OrganikaVer1.BusinessLogic;
+using OrganikaVer1.Service;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace OrganikaVer1
+{
+    [Activity(Label = "SignInActivity")]
+    public class SignInActivity : Activity, Android.Views.View.IOnClickListener
+    {
+        private EditText etEmail, etPass;
+        private Button btnSignIn;
+        private TextView btnSignUp;
+        private Dialog mProgressDialog;
+
+
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.signin_layout);
+         
+            InitilizeViews();
+            Log.Debug(ProManager.TAG, $"SignInActivity: OnCreate()");
+            // Create your application here
+        }
+
+        private void InitilizeViews()
+        {           
+
+            etEmail = FindViewById<EditText>(Resource.Id.et_email2);
+            etPass = FindViewById<EditText>(Resource.Id.et_password2);
+            btnSignIn = FindViewById<Button>(Resource.Id.btn_login2);
+            btnSignUp = FindViewById<TextView>(Resource.Id.btn_sign_up);
+            btnSignIn.SetOnClickListener(this);
+            btnSignUp.SetOnClickListener(this);
+
+            //Debug Mode
+            if (ProManager.DebugMode)
+            {
+                etEmail.Text = "zabelinsky.k@gmail.com";
+                etPass.Text = "123456";
+                ShowProgressBar(true);
+                SignIn();
+            }
+        }
+        private async void SignIn()
+        {
+            //Show ProgressBar
+            ShowProgressBar(true);
+            string userAuthID = await UsersRepository.SignInUserAsync(etEmail.Text, etPass.Text);
+            if (userAuthID != null) //Success
+            {
+                Log.Debug(ProManager.TAG, $"Firebase Auth SignIn success: {etEmail.Text} {etPass.Text}");
+                //Toast.MakeText(this, "SignIn Success", ToastLength.Short).Show();
+                GetCurrentUserFromDB(userAuthID);
+            }
+            else
+            {
+                ShowProgressBar(false);
+                Log.Debug(ProManager.TAG, $"Firebase Auth SignIn Failed: {etEmail.Text} {etPass.Text}");
+                Toast.MakeText(this, "SignIn Process failed", ToastLength.Short).Show();
+            }
+        }
+
+        private async void GetCurrentUserFromDB(string userAuthID)
+        {
+            var userfromDB = await UsersRepository.GetByIdAsync(userAuthID);
+
+            if (userfromDB != null)
+            {
+                //Get current user from Firestore DB
+                //Set Current User 
+                ShowProgressBar(false);
+                ProManager.CurrentUser = userfromDB as Model.User;
+                StartActivity(typeof(CalendarActivity));
+            }
+            else
+            {
+                ShowProgressBar(false);
+                Log.Debug(ProManager.TAG, "SighIn: Failed get user from DB");
+                Toast.MakeText(this, "SignIn Process failed", ToastLength.Short).Show();
+            }
+
+        }
+
+        public void OnClick(View v)
+        {
+
+            if (v == btnSignIn)
+            {
+                if (Validate())
+                {
+                    
+                    SignIn();
+                }
+            }
+            else if (v == btnSignUp)
+            {
+                StartActivity(typeof(SignUpActivity));
+            }
+        }
+        private void ShowProgressBar(bool show)
+        {
+            //android:background="@android:color/transparent"
+
+            if (show)
+            {
+                mProgressDialog = new Dialog(this, Android.Resource.Style.ThemeNoTitleBar);
+                View view = LayoutInflater.From(this).Inflate(Resource.Layout.fb_progressbar, null);
+                //var mProgressMessage = (TextView)view.FindViewById(Resource.Id.;
+                //mProgressMessage.Text = "Loading...";
+                mProgressDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
+                mProgressDialog.SetContentView(view);
+                mProgressDialog.SetCancelable(false);
+                mProgressDialog.Show();
+            }
+            else
+            {
+                mProgressDialog.Dismiss();
+            }
+        }
+        private bool Validate()
+        {
+
+            return true;
+        }
+    }
+}

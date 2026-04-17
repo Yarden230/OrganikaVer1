@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg3">
+
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User Dashboard"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#bd135c"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#F3E4E4" />
+
+	<Button
+        android:id="@+id/btnAccountPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account Panel"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#e62575"
+        android:textColor="#FFFFFF" />
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f27eae"
+        android:layout_marginHorizontal="16dp" />
+
+	<Button
+        android:id="@+id/btnCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calendar"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#de4ecf"
+        android:textColor="#FFFFFF" />
+
+	<Button
+        android:id="@+id/btnTrackerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tracker List"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#e62575"
+        android:textColor="#FFFFFF" />
+
+	<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Do List"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#f27eae"
+        android:textColor="#FFFFFF" />
+
+	<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personal Chat"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#e62575"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

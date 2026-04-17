@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+	<com.google.android.material.textfield.TextInputLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+		android:gravity="center_horizontal"
+		android:id="@+id/addevent_input_eventname">
+		<EditText
+			android:layout_width="230dp"
+			android:layout_height="wrap_content"
+			android:inputType="text"
+			android:id="@+id/et_event_name"
+			android:maxLines="1"
+			android:hint="Event name"/>
+	</com.google.android.material.textfield.TextInputLayout>
+	<com.google.android.material.textfield.TextInputLayout
+		android:layout_below="@+id/addevent_input_eventname"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:id="@+id/addevent_input_a_hours">
+		<EditText
+			android:layout_width="230dp"
+			android:layout_height="wrap_content"
+			android:inputType="number"
+			android:id="@+id/et_a_hours"
+			android:hint="How many hours do you want to dedicate for it this week?"/>
+	</com.google.android.material.textfield.TextInputLayout>
+	
+	<Button
+		android:layout_below="@+id/addevent_input_a_hours"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="80dp"
+		android:layout_marginRight="80dp"
+		android:layout_width="230dp"
+		android:layout_height="50dp"
+		android:textSize="15dp"
+		android:background="#3495eb"
+		android:text="Add event"
+		android:id="@+id/btn_addevent"/>
+
+
+</RelativeLayout>
