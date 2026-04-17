@@ -42,14 +42,14 @@ namespace OrganikaVer1
             _btnSignUp.Click += BtnSignUp_Click;
 
             //Debug Mode
-            if (ProManager.DebugMode)
-            {
-                _firstName.Text = "FName";
-                _lastName.Text = "LName";
-                _userEmail.Text = "user@gmail.com";
-                _userPassword.Text = "123456";
-                _userMobile.Text = "0523344545";
-            }
+            //if (ProManager.DebugMode)
+            //{
+            //    _firstName.Text = "FName";
+            //    _lastName.Text = "LName";
+            //    _userEmail.Text = "user@gmail.com";
+            //    _userPassword.Text = "123456";
+            //    _userMobile.Text = "0523344545";
+            //}
         }
         private void BtnSignUp_Click(object sender, EventArgs e)
         {

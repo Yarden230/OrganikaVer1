@@ -19,8 +19,6 @@ namespace OrganikaVer1
         private readonly string TAG = "YARDENAPP";
 
 
-        //Yarden changee
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,9 +31,9 @@ namespace OrganikaVer1
             Log.Debug(TAG, $"MainActivity: OnCreate()");
 
             //Debug Mode
-            if (ProManager.DebugMode)
-                StartActivity(typeof(SignUpActivity));
-            //StartActivity(typeof(SignInActivity));
+            if (ProManager.DebugMode)                
+                StartActivity(typeof(SignInActivity));
+            //StartActivity(typeof(SignUpActivity));
         }
 
         private void InitialViews()

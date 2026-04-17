@@ -73,7 +73,7 @@ namespace OrganikaVer1.Service
         }
 
         // INSERT: saves all event fields to the "events" collection
-        public static async Task InsertAsync(object item)
+        public static async Task<string> InsertAsync(object item)
         {
             Model.Event tmpEvent = item as Model.Event;
             try
@@ -91,16 +91,18 @@ namespace OrganikaVer1.Service
 
                 await eventReference.Set(eventMap);
                 Log.Debug(ProManager.TAG, $"Add Event to Firestore completed");
+
+                return eventReference.Id;
             }
             catch (FirebaseFirestoreException ex)
             {
                 Log.Error(ProManager.TAG, $"Add Event to Firestore failed: {ex.Message}");
-                throw new Exception("Add Event to Firestore failed");
+                throw new Exception("Add Event failed");
             }
             catch (Exception ex)
             {
                 Log.Error(ProManager.TAG, $"Add Event to Firestore failed: {ex.Message}");
-                throw new Exception("Add Event to Firestore failed");
+                throw new Exception("Add Event failed");
             }
         }
 
@@ -128,7 +130,7 @@ namespace OrganikaVer1.Service
             }
         }
 
-        // GET ALL: fetches all events from the "events" collection
+        // GET ALL: fetches all events from the "events" collection as Model.Event objects
         public static async Task<List<object>> GetAllAsync()
         {
             List<object> events = new List<object>();
@@ -144,7 +146,7 @@ namespace OrganikaVer1.Service
                         Model.Event ev = new Model.Event()
                         {
                             Id = item.Id,
-                            EventName = item.Get("EventName").ToString(),
+                            EventName = item.Get("EventName").ToString(), //trinary var temp = bolean ? "tre" : "flase";
                             AssignedTime = item.Contains("AssignedTime") ? int.Parse(item.Get("AssignedTime").ToString()) : 0,
                             ScheduledHours = item.Contains("ScheduledHours") ? int.Parse(item.Get("ScheduledHours").ToString()) : 0,
                             Completed = item.Contains("Completed") ? int.Parse(item.Get("Completed").ToString()) : 0,
@@ -159,12 +161,12 @@ namespace OrganikaVer1.Service
             catch (FirebaseFirestoreException ex)
             {
                 Log.Debug(ProManager.TAG, $"GetEventsCollection failed: {ex.Message}");
-                return events;
+                throw new Exception("Get events collection failed");
             }
             catch (Exception ex)
             {
                 Log.Debug(ProManager.TAG, $"GetEventsCollection general error: {ex.Message}");
-                return events;
+                throw new Exception("Get events collection failed");
             }
         }
 

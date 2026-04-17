@@ -15,7 +15,7 @@ namespace OrganikaVer1.BusinessLogic
 {
     public class ProManager
     {
-        public static bool DebugMode = false; //if true- will start immediatly w/o needing to fill in details
+        public static bool DebugMode = true; //if true- will start immediatly w/o needing to fill in details
         public static readonly string TAG = "YARDENAPP";
 
         public static User CurrentUser { get; set; }

@@ -46,8 +46,8 @@ namespace OrganikaVer1
             //Debug Mode
             if (ProManager.DebugMode)
             {
-                etEmail.Text = "zabelinsky.k@gmail.com";
-                etPass.Text = "123456";
+                etEmail.Text = "yarden.admin@gmail.com";
+                etPass.Text = "yardenadmin";
                 ShowProgressBar(true);
                 SignIn();
             }

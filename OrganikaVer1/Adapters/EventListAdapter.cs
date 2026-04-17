@@ -38,7 +38,7 @@ namespace OrganikaVer1.Adapters
                 holder = new EventListAdapterViewHolder();
                 var inflater = context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
                 view = inflater.Inflate(Resource.Layout.trackevent_layout, parent, false);
-                holder.tvName = view.FindViewById<TextView>(Resource.Id.tvName);
+                holder.tvName = view.FindViewById<TextView>(Resource.Id.tvEventName);
                 holder.tvAssignedTime = view.FindViewById<TextView>(Resource.Id.tvAssignedTime);
                 holder.tvScheduledHours = view.FindViewById<TextView>(Resource.Id.tvScheduledHours);
                 holder.tvCompleted = view.FindViewById<TextView>(Resource.Id.tvCompleted);
